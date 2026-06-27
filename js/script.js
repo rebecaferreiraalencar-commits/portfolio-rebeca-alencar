@@ -1,6 +1,4 @@
-Sem problema, sem precisar abrir nada no seu computador! Eu colo o código aqui, você só copia direto do chat. 😊
-No GitHub: Add file → Create new file → no campo do nome digite js/script.js → clique na caixa de edição e cole todo este conteúdo:
-javascript/* =====================================================================
+/* =====================================================================
    PORTFÓLIO — Rebeca Ferreira de Alencar
    JavaScript puro (sem frameworks/bibliotecas), conforme exigido.
 
