@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebeca Ferreira de Alencar | Portfólio</title>
+  <meta name="description" content="Portfólio pessoal de Rebeca Ferreira de Alencar, estudante de Análise e Desenvolvimento de Sistemas.">
+
+  <!-- Fontes do Google Fonts: Fraunces (títulos), Plus Jakarta Sans (texto) e Caveat (detalhe manuscrito) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:wght@400;600;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       SVG ESCONDIDO: define o padrão "trança" usado como divisor decorativo
+       entre as seções. Ele é definido uma única vez aqui e reaproveitado
+       em vários lugares da página através de fill="url(#braidPattern)".
+       Faz referência à profissão de trancista da Rebeca :)
+  ==================================================================== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <pattern id="braidPattern" width="60" height="32" patternUnits="userSpaceOnUse">
+        <!-- primeira metade do entrelaçado (0 a 30) -->
+        <path d="M0,16 C7.5,30 22.5,30 30,16" fill="none" stroke="var(--pink-deep)" stroke-width="6" stroke-linecap="round"/>
+        <path d="M0,16 C7.5,2 22.5,2 30,16" fill="none" stroke="var(--pink)" stroke-width="6" stroke-linecap="round"/>
+        <!-- segunda metade do entrelaçado (30 a 60), invertendo qual fio fica na frente -->
+        <path d="M30,16 C37.5,2 52.5,2 60,16" fill="none" stroke="var(--pink-deep)" stroke-width="6" stroke-linecap="round"/>
+        <path d="M30,16 C37.5,30 52.5,30 60,16" fill="none" stroke="var(--pink)" stroke-width="6" stroke-linecap="round"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <!-- ===================================================================
+       CABEÇALHO / MENU PRINCIPAL
+       Menu fixo no topo, visível em toda a página (navegação por âncoras).
+  ==================================================================== -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#sobre" class="logo">rebeca<span class="logo-dot">.</span></a>
+
+      <!-- Botão hambúrguer: só aparece em telas pequenas (JS controla a classe "open") -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navList">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav-list" id="navList">
+          <li><a href="#sobre" class="nav-link" data-section="sobre">Sobre mim</a></li>
+          <li><a href="#formacao" class="nav-link" data-section="formacao">Formação</a></li>
+          <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfólio</a></li>
+          <li><a href="#contato" class="nav-link" data-section="contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botão de alternância de tema claro/escuro -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar para tema escuro" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- =================================================================
+         SEÇÃO 1 — SOBRE MIM
+    ================================================================== -->
+    <section id="sobre" class="section hero">
+      <div class="container hero-grid">
+
+        <div class="hero-text reveal">
+          <p class="eyebrow">seja bem-vinda(o) ✦</p>
+          <h1 class="hero-name">Rebeca Ferreira <br>de Alencar</h1>
+          <p class="hero-role">Estudante de Análise e Desenvolvimento de Sistemas</p>
+
+          <p class="hero-bio">
+            Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e atuo como
+            <strong>TARM</strong> (Técnica Auxiliar de Regulação Médica) na central de atendimento
+            da Helpmovel. Nas horas livres também trabalho como <strong>trancista</strong> — e gosto
+            de pensar que entrelaçar fios e entrelaçar lógica em código não são coisas tão
+            diferentes assim. Quando não estou estudando ou trabalhando, costumo estar numa
+            quadra de vôlei, testando uma receita de bolo nova, mergulhada em algum jogo ou
+            já planejando a próxima viagem.
+          </p>
+
+          <ul class="hobby-chips" aria-label="Hobbies">
+            <li>🏐 Vôlei (seg. e ter.)</li>
+            <li>🎂 Confeitaria</li>
+            <li>🎮 Games</li>
+            <li>✈️ Viagens</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary">Ver portfólio</a>
+            <a href="#contato" class="btn btn-ghost">Fale comigo</a>
+          </div>
+        </div>
+
+        <div class="hero-avatar-wrap reveal" aria-hidden="true">
+          <svg class="avatar-ring" viewBox="0 0 220 220">
+            <circle cx="110" cy="110" r="100" fill="none" stroke="var(--pink)" stroke-width="6" stroke-dasharray="10 14"/>
+            <circle cx="110" cy="110" r="100" fill="none" stroke="var(--pink-deep)" stroke-width="6" stroke-dasharray="10 14" stroke-dashoffset="12"/>
+          </svg>
+          <div class="avatar">
+            <span class="avatar-initials">RA</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Divisor decorativo em forma de trança -->
+    <svg class="braid-divider" role="presentation" aria-hidden="true">
+      <rect width="100%" height="100%" fill="url(#braidPattern)"></rect>
+    </svg>
+
+    <!-- =================================================================
+         SEÇÃO 2 — FORMAÇÃO
+    ================================================================== -->
+    <section id="formacao" class="section section-soft">
+      <div class="container">
+        <p class="section-tag">02</p>
+        <h2 class="section-title">Formação</h2>
+        <p class="section-lead">Minha trajetória de estudos, idiomas e experiência profissional.</p>
+
+        <!-- Linha do tempo de formação -->
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <span class="timeline-period">Em andamento</span>
+              <h3>CST em Análise e Desenvolvimento de Sistemas</h3>
+              <p>UNINTER — Centro Universitário Internacional</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <span class="timeline-period">Concluído</span>
+              <h3>Curso Técnico em Auxiliar de Necropsia</h3>
+              <p>Formação concluída. Atualmente atuo em outra área, mas é parte da minha história.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <span class="timeline-period">Em estudo</span>
+              <h3>Idiomas</h3>
+              <p>Inglês (nível básico) e Espanhol (nível básico) — aprendendo aos poucos.</p>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Experiência profissional atual -->
+        <h3 class="subsection-title reveal">Experiência atual</h3>
+        <div class="cards-row">
+          <div class="mini-card reveal">
+            <h4>TARM — Técnica Auxiliar de Regulação Médica</h4>
+            <p>Helpmovel — Central de Atendimento</p>
+          </div>
+          <div class="mini-card reveal">
+            <h4>Trancista</h4>
+            <p>Atendimentos autônomos nas horas livres</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <svg class="braid-divider" role="presentation" aria-hidden="true">
+      <rect width="100%" height="100%" fill="url(#braidPattern)"></rect>
+    </svg>
+
+    <!-- =================================================================
+         SEÇÃO 3 — PORTFÓLIO
+    ================================================================== -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <p class="section-tag">03</p>
+        <h2 class="section-title">Portfólio</h2>
+        <p class="section-lead">
+          Alguns trabalhos que já desenvolvi durante a faculdade. Os arquivos completos de cada
+          projeto estão disponíveis para download nos links abaixo.
+        </p>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+            <p class="project-tags"><span>SQL</span><span>MySQL Workbench</span><span>Modelagem de Dados</span></p>
+            <h3>Banco de Dados Relacional</h3>
+            <p>
+              Modelagem conceitual (MER) com entidades, atributos, relacionamentos, cardinalidades
+              e chaves, além da implementação completa em SQL de um sistema de Ordens de Serviço,
+              incluindo consultas com JOIN, GROUP BY e ORDER BY.
+            </p>
+            <a class="project-link" href="assets/projetos/banco-de-dados-relacional.pdf" target="_blank" rel="noopener">Ver projeto ↗</a>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-tags"><span>Python</span><span>Lógica de Programação</span></p>
+            <h3>Lógica de Programação e Algoritmos</h3>
+            <p>
+              Quatro exercícios em Python aplicando estruturas condicionais, laços de repetição
+              (while, break, continue), funções e dicionários: calculadora de mensalidade de plano
+              de saúde, sistema de pedidos de pizzaria e gerenciamento de contatos comerciais.
+            </p>
+            <a class="project-link" href="assets/projetos/logica-de-programacao.pdf" target="_blank" rel="noopener">Ver projeto ↗</a>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-tags"><span>Java</span><span>POO</span></p>
+            <h3>Cofrinho da Beca</h3>
+            <p>
+              Aplicação de console em Java aplicando os pilares da Programação Orientada a Objetos
+              (abstração, herança e polimorfismo) para simular um cofrinho com conversão automática
+              entre Real, Dólar, Euro e Iene.
+            </p>
+            <a class="project-link" href="assets/projetos/cofrinho-da-beca.zip" target="_blank" rel="noopener">Ver projeto ↗</a>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-tags"><span>UX</span><span>Levantamento de Requisitos</span></p>
+            <h3>Ambiente Virtual de Aprendizagem</h3>
+            <p>
+              Atividade extensionista: levantamento de requisitos e protótipo de alta fidelidade de
+              um aplicativo para gestão de oficinas de musicalização comunitária, alinhado ao ODS 4
+              (Educação de Qualidade).
+            </p>
+            <a class="project-link" href="assets/projetos/atividades-extensionistas.pdf" target="_blank" rel="noopener">Ver projeto ↗</a>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></p>
+            <h3>Este portfólio</h3>
+            <p>
+              O próprio site que você está vendo agora: desenvolvido com HTML5, CSS3 e JavaScript
+              puro, sem frameworks, com tema claro/escuro e formulário de contato validado.
+            </p>
+            <a class="project-link" href="https://github.com/SEU-USUARIO/SEU-REPOSITORIO" target="_blank" rel="noopener">Ver no GitHub ↗</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <svg class="braid-divider" role="presentation" aria-hidden="true">
+      <rect width="100%" height="100%" fill="url(#braidPattern)"></rect>
+    </svg>
+
+    <!-- =================================================================
+         SEÇÃO 4 — CONTATO
+    ================================================================== -->
+    <section id="contato" class="section section-soft">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="section-tag">04</p>
+          <h2 class="section-title">Contato</h2>
+          <p class="section-lead">
+            Preencha o formulário abaixo para enviar uma mensagem (envio simulado, conforme a
+            atividade da faculdade) ou me escreva direto pelo e-mail:
+          </p>
+          <p class="contact-email">
+            <a href="mailto:rebecaferreiraalencar@gmail.com">rebecaferreiraalencar@gmail.com</a>
+          </p>
+        </div>
+
+        <!-- Formulário de contato com validação em JavaScript -->
+        <form id="contactForm" class="contact-form reveal" novalidate>
+          <div class="form-field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            <span class="error-message" id="erroNome"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            <span class="error-message" id="erroEmail"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+            <span class="error-message" id="erroMensagem"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Caixa de confirmação (toast) usada pelo JavaScript ao enviar o formulário -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Feito com 💗 por Rebeca Ferreira de Alencar — <span id="anoAtual"></span></p>
+      <a href="https://github.com/SEU-USUARIO/SEU-REPOSITORIO" target="_blank" rel="noopener">Código no GitHub</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
