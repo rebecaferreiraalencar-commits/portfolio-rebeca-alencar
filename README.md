@@ -28,4 +28,4 @@ assets/projetos/        → arquivos dos trabalhos exibidos na seção Portfóli
 
 ## Site publicado
 
-🔗 https://SEU-USUARIO.github.io/portfolio-rebeca-alencar/
+🔗https://rebecaferreiraalencar-commits.github.io/portfolio-rebeca-alencar/#sobre
