@@ -1,7 +1,7 @@
 # Portfólio — Rebeca Ferreira de Alencar
 
-Site pessoal (currículo online) desenvolvido em HTML5, CSS3 e JavaScript puro,
-sem frameworks, para a atividade prática de Fundamentos da Programação Web.
+Site pessoal (currículo online) desenvolvido em HTML5, CSS3 e JavaScript, 
+para a atividade prática de Fundamentos da Programação Web.
 
 ## Estrutura dos arquivos
 
